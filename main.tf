@@ -14,7 +14,7 @@ resource "aws_iam_role" "jams-cluster" {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Efect": "Allow",
+      "Effect": "Allow",
       "Principal":  {
         "Service": "eks.amazonaws.com"
       },
@@ -72,7 +72,7 @@ resource "aws_iam_role" "jams-node" {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Efect": "Allow",
+      "Effect": "Allow",
       "Principal":  {
         "Service": "ec2.amazonaws.com"
       },
@@ -113,7 +113,7 @@ resource "aws_eks_node_group" "jams-node-group" {
     min_size     = var.nodegroup_min_size
   }
 
-  disk_size     = var.nodegroup_disk_size
+  disk_size      = var.nodegroup_disk_size
   instance_types = var.nodegroup_instance_types
 
   depends_on = [
